@@ -17,9 +17,13 @@ document.addEventListener("DOMContentLoaded", function () {
       // Not boş değilse ekle
       if (newNote.trim() !== "") {
         // Notu diziye ekle
-        diaryNotes.push(newNote);
+        diaryNotes.push({
+          text: newNote,
+          date: getCurrentDateTime(),
+        });
   
-        // Günlük notlarını locale kaydet
+        // Günlük notları ters sıraya çevir ve locale kaydet
+        diaryNotes.reverse();
         saveDiaryNotesToLocalStorage(diaryNotes);
   
         // Günlük notlarını gösteren fonksiyonu çağır
@@ -42,7 +46,11 @@ document.addEventListener("DOMContentLoaded", function () {
         noteDiv.classList.add("card");
   
         // Notu içine yerleştir
-        noteDiv.textContent = diaryNotes[i];
+        noteDiv.textContent = diaryNotes[i].text;
+  
+        // Tarih bilgisini gösteren bir span oluştur
+        const dateSpan = document.createElement("span");
+        dateSpan.textContent = "Tarih: " + diaryNotes[i].date;
   
         // Sil butonunu oluştur
         const deleteBtn = document.createElement("button");
@@ -55,8 +63,24 @@ document.addEventListener("DOMContentLoaded", function () {
           displayDiaryNotes();
         });
   
-        // Div'e sil butonunu ekle
+        // Düzenle butonunu oluştur
+        const editBtn = document.createElement("button");
+        editBtn.textContent = "Düzenle";
+        editBtn.classList.add("editBtn");
+        editBtn.addEventListener("click", function () {
+          const editedNote = prompt("Notunuzu düzenleyin:", diaryNotes[i].text);
+          if (editedNote !== null) {
+            diaryNotes[i].text = editedNote;
+            diaryNotes[i].date = getCurrentDateTime();
+            saveDiaryNotesToLocalStorage(diaryNotes);
+            displayDiaryNotes();
+          }
+        });
+  
+        // Div'e tarih bilgisini ve butonları ekle
+        noteDiv.appendChild(dateSpan);
         noteDiv.appendChild(deleteBtn);
+        noteDiv.appendChild(editBtn);
   
         // Cards bölgesine ekle
         cardsContainer.appendChild(noteDiv);
@@ -76,5 +100,12 @@ document.addEventListener("DOMContentLoaded", function () {
   
     // Sayfa yüklendiğinde günlük notları göster
     displayDiaryNotes();
+  
+    // Şu anki tarih ve saat bilgisini döndüren yardımcı fonksiyon
+    function getCurrentDateTime() {
+      const now = new Date();
+      const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric', timeZoneName: 'short' };
+      return now.toLocaleDateString('tr-TR', options);
+    }
   });
   
