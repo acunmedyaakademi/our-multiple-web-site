@@ -1,39 +1,39 @@
-const digitalCardBerke = document.querySelector("#divFieldsBerke"); 
+const digitalCardBerke = document.querySelector("#divFieldsBerke");
 
-async function cardBerke(){
+async function cardBerke() {
     const cardBerke = await fetch("https://api.github.com/users/berkeskin");
-    const data =  await cardBerke.json();
+    const data = await cardBerke.json();
     return [data];
-
 }
 
-async function getCardBerke(){
+async function getCardBerke() {
     const data = await cardBerke();
     for (const user of data) {
-        digitalCardBerke.innerHTML +=  `
-        <div id="link">
-            <pre><a href="https://www.instagram.com/berkeskinnnn/" target="_blank"><i class="fa-brands fa-instagram"></i> İNSTAGRAM</a>          <a id="link2" href="https://www.linkedin.com/in/berke-keskin-93760329a/" target="_blank"><i class="fa-brands fa-linkedin"></i></i> LİNKLEDİN</a>          <a id="link3" href="https://github.com/berkeskin" target="_blank"><i class="fa-brands fa-square-github"></i></i> GİTHUB</a></pre>
-        </div>
-        
-        <div>
-            <img id="img" src="${user.avatar_url}" alt="">
-        </div>
-        <ul id="users">
-            <li id="user1">İsim Soyisim : ${user.name}</li>
-            <li id="user2">Kullanıcı Adı : ${user.login}</li>
-            <li id="user3">Lokasyon : ${user.location}</li>
-            <li id="user4">Kullanıcı İD : ${user.id}</li>
-            <li id="user5">Public Repo : ${user.public_repos}</li>
-            <li id="user6">Public Gists : ${user.public_gists}</li>
-            <li id="user7">Takipçi : ${user.followers} 
-            <li id="user8">Takip Edilen : ${user.following}</li></span>
-            <p id="user9">BİO : ${user.bio}</p>
-        </ul>
-         `
+        digitalCardBerke.innerHTML += `
+        <div class="container">
+            <div id="link">
+            <pre>   <a id="berkeinsta" href="https://www.instagram.com/berkeskinnnn/" target="_blank"><i class="fa-brands fa-instagram"></i> İNSTAGRAM</a>          <a id="link2" href="https://www.linkedin.com/in/berke-keskin-93760329a/" target="_blank"><i class="fa-brands fa-linkedin"></i></i> LİNKLEDİN</a>          <a id="link3" href="https://github.com/berkeskin" target="_blank"><i class="fa-brands fa-square-github"></i></i> GİTHUB</a></pre>
+            </div>
+            <div>
+                <img id="berke" width="100px" height="auto" id="img" src="${user.avatar_url}" alt="">
+            </div>
+            <ul id="users">
+                <li id="user1">İsim Soyisim : ${user.name}</li>
+                <li id="user2">Kullanıcı Adı : ${user.login}</li>
+                <li id="user3">Lokasyon : ${user.location}</li>
+                <li id="user4">Kullanıcı İD : ${user.id}</li>
+                <li id="user5">Public Repo : ${user.public_repos}</li>
+                <li id="user6">Public Gists : ${user.public_gists}</li>
+                <li id="user7">Takipçi : ${user.followers} </li>
+                <li id="user8">Takip Edilen : ${user.following}</li>
+                <p id="user9">BİO : ${user.bio}</p>
+            </ul>
+        </div>`;
     }
 }
 
 getCardBerke();
+
 
 
 const digitalCardSerhat = document.querySelector("#divFieldsSerhat"); 
@@ -48,26 +48,26 @@ async function cardSerhat(){
 async function getCardSerhat(){
     const data = await cardSerhat();
     for (const user of data) {
-        digitalCardSerhat.innerHTML +=  `
-        <div id="link">
-            <pre><a href="https://www.instagram.com/koc.serhatt/" target="_blank"><i class="fa-brands fa-instagram"></i> İNSTAGRAM</a>          <a id="link2" href="https://www.linkedin.com/in/serhat-ko%C3%A7-56b30929b/" target="_blank"><i class="fa-brands fa-linkedin"></i></i> LİNKLEDİN</a>          <a id="link3" href="https://github.com/kocserhatt" target="_blank"><i class="fa-brands fa-square-github"></i></i> GİTHUB</a></pre>
-        </div>
-        
-        <div>
-            <img id="img" src="${user.avatar_url}" alt="">
-        </div>
-        <ul id="users">
-            <li id="user1">İsim Soyisim : ${user.name}</li>
-            <li id="user2">Kullanıcı Adı : ${user.login}</li>
-            <li id="user3">Lokasyon : ${user.location}</li>
-            <li id="user4">Kullanıcı İD : ${user.id}</li>
-            <li id="user5">Public Repo : ${user.public_repos}</li>
-            <li id="user6">Public Gists : ${user.public_gists}</li>
-            <li id="user7">Takipçi : ${user.followers} 
-            <li id="user8">Takip Edilen : ${user.following}</li></span>
-            <p id="user9">BİO : ${user.bio}</p>
-        </ul>
-         `
+        digitalCardSerhat.innerHTML += `
+        <div class="container1">
+            <div id="link">
+            <pre>   <a href="https://www.instagram.com/berkeskinnnn/" target="_blank"><i class="fa-brands fa-instagram"></i> İNSTAGRAM</a>          <a id="link2" href="https://www.linkedin.com/in/berke-keskin-93760329a/" target="_blank"><i class="fa-brands fa-linkedin"></i></i> LİNKLEDİN</a>          <a id="link3" href="https://github.com/berkeskin" target="_blank"><i class="fa-brands fa-square-github"></i></i> GİTHUB</a></pre>
+            </div>
+            <div>
+                <img id="serhat" width="100px" height="auto" id="img" src="${user.avatar_url}" alt="">
+            </div>
+            <ul id="users">
+                <li id="user1">İsim Soyisim : ${user.name}</li>
+                <li id="user2">Kullanıcı Adı : ${user.login}</li>
+                <li id="user3">Lokasyon : ${user.location}</li>
+                <li id="user4">Kullanıcı İD : ${user.id}</li>
+                <li id="user5">Public Repo : ${user.public_repos}</li>
+                <li id="user6">Public Gists : ${user.public_gists}</li>
+                <li id="user7">Takipçi : ${user.followers} </li>
+                <li id="user8">Takip Edilen : ${user.following}</li>
+                <p id="user9">BİO : ${user.bio}</p>
+            </ul>
+        </div>`;
     }
 }
 
@@ -85,26 +85,26 @@ async function cardHakan(){
 async function getCardHakan(){
     const data = await cardHakan();
     for (const user of data) {
-        digitalCardHakan.innerHTML +=  `
-        <div id="link">
-            <pre><a href="https://www.instagram.com/hakaantkn/" target="_blank"><i class="fa-brands fa-instagram"></i> İNSTAGRAM</a>          <a id="link2" href="https://www.linkedin.com/in/hakan-tekin-a6bab229a/" target="_blank"><i class="fa-brands fa-linkedin"></i></i> LİNKLEDİN</a>          <a id="link3" href="https://github.com/Hakaantkn" target="_blank"><i class="fa-brands fa-square-github"></i></i> GİTHUB</a></pre>
-        </div>
-        
-        <div>
-            <img id="img" src="${user.avatar_url}" alt="">
-        </div>
-        <ul id="users">
-            <li id="user1">İsim Soyisim : ${user.name}</li>
-            <li id="user2">Kullanıcı Adı : ${user.login}</li>
-            <li id="user3">Lokasyon : ${user.location}</li>
-            <li id="user4">Kullanıcı İD : ${user.id}</li>
-            <li id="user5">Public Repo : ${user.public_repos}</li>
-            <li id="user6">Public Gists : ${user.public_gists}</li>
-            <li id="user7">Takipçi : ${user.followers} 
-            <li id="user8">Takip Edilen : ${user.following}</li></span>
-            <p id="user9">BİO : ${user.bio}</p>
-        </ul>
-         `
+        digitalCardHakan.innerHTML += `
+        <div class="container2">
+            <div id="link">
+            <pre>   <a   href="https://www.instagram.com/berkeskinnnn/" target="_blank"><i class="fa-brands fa-instagram"></i> İNSTAGRAM</a>          <a id="link2" href="https://www.linkedin.com/in/berke-keskin-93760329a/" target="_blank"><i class="fa-brands fa-linkedin"></i></i> LİNKLEDİN</a>          <a id="link3" href="https://github.com/berkeskin" target="_blank"><i class="fa-brands fa-square-github"></i></i> GİTHUB</a></pre>
+            </div>
+            <div>
+                <img id="hakan" width="100px" height="auto" id="img" src="${user.avatar_url}" alt="">
+            </div>
+            <ul id="users">
+                <li id="user1">İsim Soyisim : ${user.name}</li>
+                <li id="user2">Kullanıcı Adı : ${user.login}</li>
+                <li id="user3">Lokasyon : ${user.location}</li>
+                <li id="user4">Kullanıcı İD : ${user.id}</li>
+                <li id="user5">Public Repo : ${user.public_repos}</li>
+                <li id="user6">Public Gists : ${user.public_gists}</li>
+                <li id="user7">Takipçi : ${user.followers} </li>
+                <li id="user8">Takip Edilen : ${user.following}</li>
+                <p id="user9">BİO : ${user.bio}</p>
+            </ul>
+        </div>`;
     }
 }
 
