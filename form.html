@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doküman</title>
+    <link rel="stylesheet" href="../css/form.css">
+    <script src="../js/form.js" defer></script>
+</head>
+<body> 
+    <nav id="navbar">
+        <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li><a href="daily.html">Dairy App</a></li>
+        <li><a href="todo.html">To Do</a></li>
+        <li><a href="card.html">Digital Card</a></li>
+        <li><a href="form.html">Form</a></li>
+        </ul>
+      </nav>
+    <div id="form">
+        <label for="kullaniciAdi">Kullanıcı Adı</label>
+        <input type="text" placeholder="adınızı girin..." class="name" id="kullaniciAdi"> <br>
+        <label for="sifre" class="password">Şifre</label>
+        <input type="password" placeholder="şifre girin..." id="sifre"> <br>
+        <label for="email" class="mail">E-posta</label>
+        <input type="email" placeholder="mail giriniz..." id="email"> <br>
+        <label for="kullaniciMesaji">Mesaj</label>
+        <textarea name="kullaniciMesaji" id="kullaniciMesaji" cols="30" rows="10" placeholder="mesajınızı girin..."></textarea>
+        <input type="submit" id="submitBtn">
+    </div>
+    <div id="veriGoster"></div>
+    
+</body>
+</html>
