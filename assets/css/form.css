@@ -1,0 +1,93 @@
+/* form.css */
+#navbar {
+    background-color: #333;
+    border-radius: 15px;
+    justify-content: center;
+    display: flex;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+#navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+#navbar li {
+    margin: 0 10px;
+    font-size: x-large;
+}
+#navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    transition: font-size 0.3s ease;
+}
+#navbar a:hover {
+    font-size: 43px;
+}
+#form {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+textarea {
+    width: calc(100% - 16px);
+    /* Adjusted width to account for padding */
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+#veriGoster {
+    margin-top: 20px;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column-reverse;
+    /* Reverse the order of items to display newly added information at the bottom */
+}
+
+/* Yeni düzen için eklenen stil */
+#veriGoster p {
+    margin: 5px 0;
+}
+
+#veriGoster strong {
+    display: block;
+    margin-bottom: 5px;
+}
