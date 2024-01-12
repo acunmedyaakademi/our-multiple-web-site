@@ -62,10 +62,24 @@ textarea {
 }
 
 #veriGoster {
-    margin-top: 20px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    background-color: #fff;
+    border: 1px solid #ccc; 
+    padding: 10px; 
 }
+
+#veriGoster > div {
+    margin-bottom: 10px; 
+}
+
+#veriGoster button {
+    background-color: #dc3545;
+    color: #fff; 
+    padding: 5px 10px; 
+    cursor: pointer; 
+}
+
+#veriGoster button:hover {
+    background-color: #c82333;
+    
+}
+
 
