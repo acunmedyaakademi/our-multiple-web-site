@@ -12,7 +12,7 @@ async function getCardBerke() {
         digitalCardBerke.innerHTML += `
         <div class="container">
             <div id="link">
-            <pre>   <a id="berkeinsta" href="https://www.instagram.com/berkeskinnnn/" target="_blank"><i class="fa-brands fa-instagram"></i> İNSTAGRAM</a>          <a id="link2" href="https://www.linkedin.com/in/berke-keskin-93760329a/" target="_blank"><i class="fa-brands fa-linkedin"></i></i> LİNKLEDİN</a>          <a id="link3" href="https://github.com/berkeskin" target="_blank"><i class="fa-brands fa-square-github"></i></i> GİTHUB</a></pre>
+            <pre>   <a id="berkeInsta" href="https://www.instagram.com/berkeskinnnn/" target="_blank"><i class="fa-brands fa-instagram"></i> İNSTAGRAM</a>          <a id="berkeLinkedin" href="https://www.linkedin.com/in/berke-keskin-93760329a/" target="_blank"><i class="fa-brands fa-linkedin"></i></i> LİNKLEDİN</a>          <a id="berkeGithub" href="https://github.com/berkeskin" target="_blank"><i class="fa-brands fa-square-github"></i></i> GİTHUB</a></pre>
             </div>
             <div>
                 <img id="berke" width="100px" height="auto" id="img" src="${user.avatar_url}" alt="">
@@ -51,7 +51,7 @@ async function getCardSerhat(){
         digitalCardSerhat.innerHTML += `
         <div class="container1">
             <div id="link">
-            <pre>   <a href="https://www.instagram.com/berkeskinnnn/" target="_blank"><i class="fa-brands fa-instagram"></i> İNSTAGRAM</a>          <a id="link2" href="https://www.linkedin.com/in/berke-keskin-93760329a/" target="_blank"><i class="fa-brands fa-linkedin"></i></i> LİNKLEDİN</a>          <a id="link3" href="https://github.com/berkeskin" target="_blank"><i class="fa-brands fa-square-github"></i></i> GİTHUB</a></pre>
+            <pre>   <a id="serhatInsta" href="https://www.instagram.com/berkeskinnnn/" target="_blank"><i class="fa-brands fa-instagram"></i> İNSTAGRAM</a>          <a id="serhatLinkedin" href="https://www.linkedin.com/in/berke-keskin-93760329a/" target="_blank"><i class="fa-brands fa-linkedin"></i></i> LİNKLEDİN</a>          <a id="serhatGithub" href="https://github.com/berkeskin" target="_blank"><i class="fa-brands fa-square-github"></i></i> GİTHUB</a></pre>
             </div>
             <div>
                 <img id="serhat" width="100px" height="auto" id="img" src="${user.avatar_url}" alt="">
