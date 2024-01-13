@@ -130,3 +130,12 @@
     text-decoration: none;
     color: gray;
 }
+
+.editNow h1 {
+    color: white;
+    font-size: x-large;
+    transition: font-size 0.3s ease;
+}
+.editNow h1:hover {
+    font-size: 30px;
+}
