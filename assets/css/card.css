@@ -50,7 +50,15 @@
     text-decoration: none;
 }
 
-#berkeinsta{
+#berkeInsta{
+    text-decoration: none;
+}
+
+#berkeLinkedin{
+    text-decoration: none;
+}
+
+#berkeGithub{
     text-decoration: none;
 }
 
@@ -67,6 +75,28 @@
     border: 4px solid black;
     margin-left: 1100px;
     margin-top: -360px;
+    transition: transform 0.3s ease;
+}
+
+.container1:hover{
+    transform:  scale(1.1);
+}
+
+#link{
+    transition: font-size 0.3s ease;
+    text-decoration: none;
+}
+
+#serhatInsta{
+    text-decoration: none;
+}
+
+#serhatLinkedin{
+    text-decoration: none;
+}
+
+#serhatGithub{
+    text-decoration: none;
 }
 
 #serhat{
